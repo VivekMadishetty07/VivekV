@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shoppee: Your Order</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.shop.js"></script>
+</head>
+
+<body id="checkout-page">
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+		  <div class="navbar-header">
+			<a class="navbar-brand" href="index.html">Shoppee</a>
+		  </div>
+		  <ul class="nav navbar-nav">
+			<li class="active"><a href="index.html">Home</a></li>
+		  </ul>
+		  <div class="col-sm-3 col-md-3 pull-right">
+			<form class="navbar-form" role="search">
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+				<div class="input-group-btn">
+					<button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+				</div>
+			</div>
+			</form>
+		
+			</div>
+			<ul class="nav navbar-nav pull-right">
+				<li id="beforelogin"><a data-toggle="modal" data-target="#myModal">Login</a></li>
+				<li id="afterloginusesrname"><a>Username</a></li>
+				<li id="afterlogin"><a>Logout</a></li>
+				<li><a href="cart.html">Cart</a></li>
+			  </ul>
+		</div>
+	  </nav>
+<div id="site">
+	<header id="masthead">
+		<h1><b>Shoppee </b><span class="tagline">Best brands</h1>
+	</header>
+	<div id="content">
+		<h1>Your Order</h1>
+			<table id="checkout-cart" class="shopping-cart">
+			  <thead>
+				<tr>
+					<th scope="col">Item</th>
+					<th scope="col">Qty</th>
+					<th scope="col">Price</th>
+				</tr>
+			  </thead>
+			  <tbody>
+			  
+			  </tbody>
+			</table>
+		 <div id="pricing">
+			
+			<p id="shipping">
+				<strong>Shipping</strong>: <span id="sshipping"></span>
+			</p>
+			
+			<p id="sub-total">
+				<strong>Total</strong>: <span id="stotal"></span>
+			</p>
+		 </div>
+		 
+		 <div id="user-details">
+		 	<h2>Your Data</h2>
+		 	<div id="user-details-content"></div>
+		 </div>
+		 
+		 
+		 
+		 
+<!-- <form id="paypal-form"> -->
+	<!-- <input type="hidden" name="cmd" value="_cart" />
+	<input type="hidden" name="upload" value="1" />
+	<input type="hidden" name="business" value="" />
+        
+	<input type="hidden" name="currency_code" value="" /> -->
+	<!-- <input type="submit" class="btn" value="Place your Order" /> -->
+<!-- </form> -->
+		 
+<input type="button" onclick="checkout2()" class="btn" value="Place your Order" />
+	</div>
+	
+	
+
+</div>
+
+<footer id="site-info">
+		Copyright &copy; Shoppee
+	</footer>
+	<script type="text/javascript" src="js/javascript.shop.js"></script>
+
+</body>
+</html>	

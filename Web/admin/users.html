@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>shoppe</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.css"/>  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.js"></script>
+  
+  <script type="text/javascript" src="js/javascript.admin.js"></script>
+
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <h1><a href="index.html">Shoppe<span class="logo_colour">Admin</span></a></h1>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li  ><a href="category.html">Category</a></li>
+          <li class="selected"><a href="users.html">Users</a></li>
+          <li><a onclick="adminlogout()">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content_header"></div>
+    <div id="site_content">
+        
+ <table id="example3" class="table table-striped table-bordered" style="width:100%">
+  <thead>
+      <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>email</th>
+        <th>address</th>
+        <th>city</th>
+        <th>country</th>
+      </tr>
+  </thead>
+  <tbody id="tbody4">
+  </tbody>
+</table>
+  <div id="ordersModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <table id="example4" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+              <th>orderid</th>
+              <th>product_id</th>
+              <th>total</th>
+              <th>created_at</th>
+              <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="tbody5">
+        </tbody>
+      </table>
+    </div>
+  
+  </div>
+      <!-- </div> -->
+    </div>
+    <div id="content_footer"></div>
+    
+  </div>
+</body>
+</html>

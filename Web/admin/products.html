@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>shoppe</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.css"/>  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.js"></script>
+  
+  <script type="text/javascript" src="js/javascript.admin.js"></script>
+
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <h1><a href="index.html">Shoppe<span class="logo_colour">Admin</span></a></h1>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="index.html">Home</a></li>
+          <li class="selected"><a href="products.html">Products</a></li>
+          <li><a href="category.html">Category</a></li>
+          <li><a href="users.html">Users</a></li>
+          <li><a onclick="adminlogout()">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content_header"></div>
+    <div id="site_content">
+      <div id="sidebar_container">
+        <div class="sidebar">
+          <div class="sidebar_top"></div>
+          <div class="sidebar_item">
+            <form id="add-product-form">
+              <div class="form-group">
+                <label for="name">Product Name:</label>
+                <input type="text" required class="form-control" id="name" placeholder="Enter Name" name="name">
+              </div>
+              <div class="form-group">
+                <label for="cat">Category:</label>
+                <select name="cat" id="cat" >
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" required class="form-control" id="price" placeholder="Enter Price" name="price">
+              </div>
+              <div class="form-group">
+                <label for="url">Image:</label>
+                <input type="file" class="form-control" id="url" name="url" accept="image/*" onchange="preview_image(event)">
+              </div>
+              <button id="submitbutton" type="submit" class="btn btn-default">Add</button>
+              <button id="resetbutton" type="reset" class="btn btn-default">Reset</button>
+            </form>
+            <button id="cancelbutton" style="display: none;" onclick="cancelbutton()" class="btn btn-default">Cancel</button>
+           </div>
+          <div class="sidebar_base"></div>
+        </div></div>
+      <!-- <div id="content"> -->
+        
+ <table id="example" class="table table-striped table-bordered" style="width:100%">
+  <thead>
+      <tr>
+        <th>product_id</th>
+        <th>name</th>
+        <th>price</th>
+        <th>url</th>
+        <th>category</th>
+      </tr>
+  </thead>
+  <tbody id="tbody">
+  </tbody>
+</table>
+      <!-- </div> -->
+    </div>
+    <div id="content_footer"></div>
+   
+  </div>
+</body>
+</html>
